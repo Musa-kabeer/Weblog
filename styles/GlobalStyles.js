@@ -48,7 +48,7 @@ html {
 }
 
 body {
-  font-family: 'Raleway', sans-serif;
+font-family: 'Roboto', sans-serif;
   color: var(--color-grey-100);
 
   transition: color 0.3s; 

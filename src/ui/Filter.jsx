@@ -1,20 +1,19 @@
 /* eslint-disable react/prop-types */
-
 import { styled } from 'styled-components';
 
+const StyledSelect = styled.select`
+  @media screen and (max-width: 769px) {
+    width: 100px;
+  }
+
+  @media screen and (max-width: 425px) {
+    width: 80px;
+  }
+`;
+
 function Filter({ filterValues }) {
-  const StyledSelect = styled.select`
-    @media screen and (max-width: 769px) {
-      width: 100px;
-    }
-
-    @media screen and (max-width: 425px) {
-      width: 80px;
-    }
-  `;
-
   return (
-    <StyledSelect value="all">
+    <StyledSelect>
       {filterValues.map((filter) => {
         return (
           <option key={filter.value} value={filter.value}>
