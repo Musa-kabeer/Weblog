@@ -5,13 +5,18 @@ const StyledNavbar = styled.nav`
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  height: 10vh;
+  height: 9vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
   padding: 0 8rem;
   background: var(--color-blue-700);
+
+  @media screen and (max-width: 1024px) {
+    padding: 0 2.5rem;
+    height: 7vh;
+  }
 
   @media screen and (max-width: 769px) {
     padding: 0 2rem;
