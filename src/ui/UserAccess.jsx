@@ -54,7 +54,7 @@ function UserAccess() {
       <SpanedLink>
         <Link to="post/create">Create Post</Link>
       </SpanedLink>
-      <ProfileImage src="me.png" alt="" />
+      <ProfileImage src="/public/user.png" alt="User" />
     </StyledUser>
   );
 }

@@ -76,7 +76,7 @@ function Post({ post }) {
       </StyledContent>
 
       <PostUserInfo>
-        <PostUserImage src="me.png" alt="" />
+        <PostUserImage src="/public/user.png" />
         <h4>Musa Abdulkabir</h4>
       </PostUserInfo>
     </StyledPost>

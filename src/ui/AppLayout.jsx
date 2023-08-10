@@ -17,6 +17,7 @@ const Main = styled.main`
 
   @media screen and (max-width: 900px) {
     width: 100%;
+    height: 92vh;
   }
 `;
 
