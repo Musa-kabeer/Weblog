@@ -15,7 +15,7 @@ const StyledNavbar = styled.nav`
 
   @media screen and (max-width: 1024px) {
     padding: 0 2.5rem;
-    height: 7vh;
+    height: 9vh;
   }
 
   @media screen and (max-width: 769px) {

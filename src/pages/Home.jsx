@@ -1,6 +1,6 @@
 import { styled } from 'styled-components';
 import PostPreview from '../ui/PostPreview';
-import Posts from '../features/posts/Posts';
+import PostsList from '../features/posts/PostsList';
 
 const StyledHome = styled.div`
   padding: 0 2rem;
@@ -14,7 +14,7 @@ function Home() {
     <StyledHome>
       <PostPreview />
 
-      <Posts />
+      <PostsList />
     </StyledHome>
   );
 }

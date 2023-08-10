@@ -115,15 +115,10 @@ img {
   filter: grayscale(var(--image-grayscale)) opacity(var(--image-opacity));
 }
 
-::-webkit-scrollbar-thumb{
-  width: 2px;
-  padding: 0 10px;
-  border-radius: 10px;
-  background: var(--color-grey-300);
-}
 
 #root{
   width: 100%;
+  overflow-y: hidden;
 }
 `;
 

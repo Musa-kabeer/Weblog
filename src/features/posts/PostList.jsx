@@ -3,6 +3,11 @@ import { formatDistance } from 'date-fns';
 import { parseISO } from 'date-fns';
 import { styled } from 'styled-components';
 import { formatDate } from '../../utils/formatDate';
+import Image from '../../ui/Image';
+import PostType from '../../ui/PostType';
+import PostHeader from '../../ui/PostHeader';
+import PostParagraph from '../../ui/PostParagraph';
+import {  NavLink } from 'react-router-dom';
 
 const StyledPost = styled.div`
   display: grid;
@@ -20,38 +25,13 @@ const PostImage = styled.div`
   height: 180px;
 `;
 
-const Image = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 7px;
-`;
-
 const StyledContent = styled.div`
   padding: 4px 0;
-`;
-
-const PostType = styled.span`
-  color: var(--color-brand-600);
-  font-size: 13px;
-  font-weight: 700;
-  margin-bottom: 10px;
-`;
-
-const PostHeader = styled.h2`
-  font-size: 17px;
-  font-weight: 800;
-  line-height: 19px;
 `;
 
 const PostTime = styled.time`
   font-size: 12px;
   font-weight: 500;
-`;
-
-const Postparagraph = styled.p`
-  font-size: 12px;
-  margin: 2px 0;
 `;
 
 const PostUserInfo = styled.div`
@@ -69,23 +49,29 @@ const PostUserImage = styled.img`
 `;
 
 function Post({ post }) {
+  const { image, title, type, id, created_at, content } = post;
+
   return (
     <StyledPost>
       <PostImage>
-        <Image src={post.image} alt={post.title} />
+        <Image src={image} alt={title} />
       </PostImage>
 
       <StyledContent>
-        <PostType>{post.type.toUpperCase()}</PostType>
-        <PostHeader>{post.title}</PostHeader>
+        <PostType>{type.toUpperCase()}</PostType>
+
+        <PostHeader>
+          <NavLink to={`/post/${id}`}>{post.title}</NavLink>
+        </PostHeader>
+
         <PostTime>
-          {formatDate(post.created_at)}
+          {formatDate(created_at)}
           {', '}
-          {formatDistance(parseISO(post.created_at), Date.now(), [
+          {formatDistance(parseISO(created_at), Date.now(), [
             { includeSeconds: true },
           ])}
         </PostTime>
-        <Postparagraph>{post.content.split('.')[0]}</Postparagraph>
+        <PostParagraph>{content.split('.')[0]}.</PostParagraph>
       </StyledContent>
 
       <PostUserInfo>

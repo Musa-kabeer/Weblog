@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { styled } from 'styled-components';
 import PostsBox from '../../ui/PostsBox';
-import Post from './Post';
+import PostList from './PostList';
 import { usePosts } from './usePosts';
 
 const StyledLoading = styled.p`
@@ -12,14 +12,12 @@ const StyledLoading = styled.p`
 function Posts() {
   const { isLoading, posts } = usePosts();
 
-  console.log(posts);
-
   if (isLoading) return <StyledLoading>Loading...</StyledLoading>;
 
   return (
     <PostsBox>
       {posts.map((post) => (
-        <Post key={post.id} post={post} />
+        <PostList key={post.id} post={post} />
       ))}
     </PostsBox>
   );
