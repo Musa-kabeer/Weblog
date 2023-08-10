@@ -1,7 +1,7 @@
 import supabase from './supabase';
 
 // GET ALL POSTS
-export const getPosts = async () => {
+export async function getPosts() {
   const { data, error } = await supabase.from('Posts').select('*');
 
   if (error) {
@@ -9,9 +9,9 @@ export const getPosts = async () => {
   }
 
   return data;
-};
+}
 
-export const getPost = async (id) => {
+export async function getPost(id) {
   let { data, error } = await supabase
     .from('Posts')
     .select('*')
@@ -23,4 +23,4 @@ export const getPost = async (id) => {
   }
 
   return data;
-};
+}
