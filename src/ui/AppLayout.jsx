@@ -12,9 +12,8 @@ const StyledLayout = styled.div`
 const Main = styled.main`
   width: 80%;
   margin: 0 auto;
-  height: 100vh;
+  height: 91vh;
   overflow-y: scroll;
-  /* background-color: orangered; */
 
   @media screen and (max-width: 900px) {
     width: 100%;

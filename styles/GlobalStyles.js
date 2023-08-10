@@ -104,8 +104,8 @@ h3,
 h4,
 h5,
 h6 {
-  overflow-wrap: break-word;
-  hyphens: auto;
+  /* overflow-wrap: break-word;
+  hyphens: auto; */
 }
 
 img {
@@ -118,7 +118,6 @@ img {
 
 #root{
   width: 100%;
-  overflow-y: hidden;
 }
 `;
 

@@ -1,16 +1,8 @@
 /* eslint-disable react/prop-types */
-import { css, styled } from 'styled-components';
+import { styled } from 'styled-components';
 
 const StyledParagraph = styled.p`
-  ${(props) =>
-    props.type === 'lg'
-      ? css`
-          font-size: 19px;
-        `
-      : css`
-          font-size: 15px;
-        `}
-
+  font-size: 16px;
   margin: 2px 0;
 `;
 

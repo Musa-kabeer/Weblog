@@ -7,7 +7,7 @@ function usePost(id) {
     data: post,
     error,
   } = useQuery({
-    queryKey: ['posts'],
+    queryKey: ['post'],
     queryFn: () => getPost(id),
   });
 

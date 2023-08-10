@@ -7,7 +7,7 @@ import Image from '../../ui/Image';
 import PostType from '../../ui/PostType';
 import PostHeader from '../../ui/PostHeader';
 import PostParagraph from '../../ui/PostParagraph';
-import {  NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const StyledPost = styled.div`
   display: grid;
@@ -32,6 +32,7 @@ const StyledContent = styled.div`
 const PostTime = styled.time`
   font-size: 12px;
   font-weight: 500;
+  padding: 8px 0;
 `;
 
 const PostUserInfo = styled.div`
@@ -60,7 +61,7 @@ function Post({ post }) {
       <StyledContent>
         <PostType>{type.toUpperCase()}</PostType>
 
-        <PostHeader>
+        <PostHeader type="sm">
           <NavLink to={`/post/${id}`}>{post.title}</NavLink>
         </PostHeader>
 
