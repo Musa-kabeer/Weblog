@@ -15,7 +15,11 @@ const Main = styled.main`
   height: 91vh;
   overflow-y: scroll;
 
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 1300px) {
+    width: 95%;
+  }
+
+  @media screen and (max-width: 1024px) {
     width: 100%;
     height: 92vh;
   }

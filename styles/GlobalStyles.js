@@ -41,6 +41,7 @@ const GlobalStyles = createGlobalStyle`
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+    transition: all .3s ease-in-out;
 }
 
 html {
@@ -48,7 +49,7 @@ html {
 }
 
 body {
-font-family: 'Roboto', sans-serif;
+  font-family: 'Red Hat Display', sans-serif;
   color: var(--color-grey-100);
 
   transition: color 0.3s; 
@@ -56,6 +57,8 @@ font-family: 'Roboto', sans-serif;
   line-height: 1.5;
   font-size: 1.6rem;
   background: var(--color-grey-50);
+
+  transition: all .3s ease-in-out;
 }
 
 input,
@@ -64,6 +67,7 @@ textarea,
 select {
   font: inherit;
   color: inherit;
+  font-family: 'Red Hat Display', sans-serif;
 }
 
 button {

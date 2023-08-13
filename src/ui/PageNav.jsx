@@ -1,5 +1,6 @@
 import { styled } from 'styled-components';
 import UserAccess from './UserAccess';
+import { useNavigate } from 'react-router-dom';
 
 const StyledNavbar = styled.nav`
   position: -webkit-sticky;
@@ -44,9 +45,11 @@ const H2 = styled.h2`
 `;
 
 function PageNav() {
+  const navigate = useNavigate();
+
   return (
     <StyledNavbar>
-      <H2>WebLog</H2>
+      <H2 onClick={() => navigate('/')}>WebLog</H2>
 
       <UserAccess />
     </StyledNavbar>

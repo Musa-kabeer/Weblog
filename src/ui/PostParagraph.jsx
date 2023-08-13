@@ -1,13 +1,10 @@
 /* eslint-disable react/prop-types */
 import { styled } from 'styled-components';
 
-const StyledParagraph = styled.p`
-  font-size: 16px;
+const PostParagraph = styled.p`
   margin: 2px 0;
+  font-size: ${(props) => (props.type === 'lg' ? '20px' : '14px')};
+  font-weight: 500;
 `;
-
-function PostParagraph({ children }) {
-  return <StyledParagraph>{children}</StyledParagraph>;
-}
 
 export default PostParagraph;

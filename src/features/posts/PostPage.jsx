@@ -14,6 +14,7 @@ import Image from '../../ui/Image';
 import PostHeader from '../../ui/PostHeader';
 import PostParagraph from '../../ui/PostParagraph';
 import PostType from '../../ui/PostType';
+import Spinner from '../../ui/Spinner';
 
 const StyledPost = styled.div`
   margin: 2rem;
@@ -51,7 +52,7 @@ function PostPage() {
   const { id } = useParams();
   const { isLoading, post } = usePost(id);
 
-  if (isLoading) return <h2>Loading...</h2>;
+  if (isLoading) return <Spinner />;
 
   const {
     content,
@@ -66,7 +67,7 @@ function PostPage() {
     <StyledPost>
       <Image src={image} alt={title} />
 
-      <PostType>{type.toUpperCase()}</PostType>
+      <PostType type="lg">{type}</PostType>
 
       <PostDetails>
         <PostDetail>

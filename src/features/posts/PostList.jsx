@@ -8,13 +8,14 @@ import PostType from '../../ui/PostType';
 import PostHeader from '../../ui/PostHeader';
 import PostParagraph from '../../ui/PostParagraph';
 import { NavLink } from 'react-router-dom';
+import user from '../../assets/user.png';
 
 const StyledPost = styled.div`
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
-  height: 400px;
+  grid-template-rows: 1fr;
+  height: 100%;
   border: 1px solid var(--color-grey-200);
-  padding: 5px;
+  padding: 8px;
   border-radius: 7px;
   color: var(--color-grey-800);
   box-shadow: 3px 4px 15px var(--color-grey-300);
@@ -30,7 +31,7 @@ const StyledContent = styled.div`
 `;
 
 const PostTime = styled.time`
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 500;
   padding: 8px 0;
 `;
@@ -59,7 +60,7 @@ function Post({ post }) {
       </PostImage>
 
       <StyledContent>
-        <PostType>{type.toUpperCase()}</PostType>
+        <PostType type="sm">{type}</PostType>
 
         <PostHeader type="sm">
           <NavLink to={`/post/${id}`}>{post.title}</NavLink>
@@ -72,11 +73,13 @@ function Post({ post }) {
             { includeSeconds: true },
           ])}
         </PostTime>
-        <PostParagraph>{content.split('.')[0]}.</PostParagraph>
+        <PostParagraph type="sm">
+          {content.split('.')[0]}.
+        </PostParagraph>
       </StyledContent>
 
       <PostUserInfo>
-        <PostUserImage src="/public/user.png" />
+        <PostUserImage src={user} alt="User" />
         <h4>Musa Abdulkabir</h4>
       </PostUserInfo>
     </StyledPost>

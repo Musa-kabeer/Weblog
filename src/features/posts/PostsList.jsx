@@ -1,18 +1,13 @@
 /* eslint-disable react/prop-types */
-import { styled } from 'styled-components';
-import PostsBox from '../../ui/PostsBox';
-import PostList from './PostList';
 import { usePosts } from './usePosts';
-
-const StyledLoading = styled.p`
-  font-size: 15px;
-  font-weight: 500;
-`;
+import PostList from './PostList';
+import PostsBox from '../../ui/PostsBox';
+import Spinner from '../../ui/Spinner';
 
 function Posts() {
   const { isLoading, posts } = usePosts();
 
-  if (isLoading) return <StyledLoading>Loading...</StyledLoading>;
+  if (isLoading) return <Spinner />;
 
   return (
     <PostsBox>

@@ -1,5 +1,7 @@
+import CreatePost from '../features/posts/CreatePost';
+
 function Create() {
-  return <div>Create Post</div>;
+  return <CreatePost />;
 }
 
 export default Create;

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { styled } from 'styled-components';
+import user from '../assets/user.png';
 
 const StyledUser = styled.div`
   display: flex;
@@ -54,7 +55,7 @@ function UserAccess() {
       <SpanedLink>
         <Link to="post/create">Create Post</Link>
       </SpanedLink>
-      <ProfileImage src="/public/user.png" alt="User" />
+      <ProfileImage src={user} alt="User" />
     </StyledUser>
   );
 }
