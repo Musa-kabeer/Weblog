@@ -8,6 +8,18 @@ import {
   AiOutlineLinkedin,
   AiOutlineUser,
 } from 'react-icons/ai';
+import {
+  EmailShareButton,
+  FacebookIcon,
+  FacebookShareButton,
+  LinkedinIcon,
+  LinkedinShareButton,
+  TelegramShareButton,
+  TwitterIcon,
+  TwitterShareButton,
+  WhatsappIcon,
+  WhatsappShareButton,
+} from 'react-share';
 import { MdOutlineDateRange } from 'react-icons/md';
 import usePost from './usePost';
 import Image from '../../ui/Image';
@@ -43,10 +55,6 @@ const StyledIcons = styled.div`
   justify-content: center;
   align-items: center;
   gap: 10px;
-
-  & svg {
-    font-size: 24px;
-  }
 `;
 
 function PostPage() {
@@ -63,6 +71,8 @@ function PostPage() {
     title,
     type,
   } = post;
+
+  const url = `weblog-v1.vercel.app/post/${postId}`;
 
   return (
     <StyledPost>
@@ -91,20 +101,42 @@ function PostPage() {
       <PostParagraph type="lg">{content}.</PostParagraph>
 
       <StyledIcons>
+        <FacebookShareButton url={url}>
+          <FacebookIcon
+            size={40}
+            round={true}
+            iconFillColor="#111827"
+          />
+        </FacebookShareButton>
+
         <Link>
-          <AiOutlineFacebook />
+          <TwitterShareButton url={url}>
+            <TwitterIcon
+              size={40}
+              round={true}
+              iconFillColor="#111827"
+            />
+          </TwitterShareButton>
         </Link>
 
         <Link>
-          <AiOutlineTwitter />
+          <LinkedinShareButton url={url}>
+            <LinkedinIcon
+              size={40}
+              round={true}
+              iconFillColor="#111827"
+            />
+          </LinkedinShareButton>
         </Link>
 
         <Link>
-          <AiOutlineInstagram />
-        </Link>
-
-        <Link>
-          <AiOutlineLinkedin />
+          <WhatsappShareButton url={url}>
+            <WhatsappIcon
+              size={40}
+              round={true}
+              iconFillColor="#111827"
+            />
+          </WhatsappShareButton>
         </Link>
       </StyledIcons>
     </StyledPost>
