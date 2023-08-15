@@ -33,6 +33,7 @@ const PostDetail = styled.div`
   align-items: center;
   justify-content: center;
   gap: 2px;
+  font-size: 11px;
 `;
 
 const StyledIcons = styled.div`

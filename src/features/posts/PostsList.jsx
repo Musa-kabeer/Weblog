@@ -27,7 +27,6 @@ function Posts() {
     filteredPosts = posts.filter(
       (post) => post.type === 'development'
     );
-  console.log(filteredPosts);
 
   if (filteredPosts.length === 0) return <Empty />;
 
